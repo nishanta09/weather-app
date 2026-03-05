@@ -1,10 +1,10 @@
 class WeatherApp {
     constructor() {
         this.apiKeys = {
-            weatherstack: '94c0a94aa3c310fd0e331d4de2f602b4',
-            openweather: 'YOUR_OPENWEATHER_KEY',
-            weatherapi: 'YOUR_WEATHERAPI_KEY'       
-        };
+    weatherstack: process.env.WEATHERSTACK_API_KEY || 'YOUR_WEATHERSTACK_KEY',
+    openweather: process.env.OPENWEATHER_API_KEY || 'YOUR_OPENWEATHER_KEY',
+    weatherapi: process.env.WEATHERAPI_KEY || 'YOUR_WEATHERAPI_KEY'       
+};
         
         this.initializeElements();
         this.bindEvents();
