@@ -99,7 +99,7 @@ class WeatherApp {
     }
 
     async fetchWeatherStack(city) {
-        const url = `http://api.weatherstack.com/current?access_key=${this.apiKeys.weatherstack}&query=${city}`;
+        const url = `https://api.weatherstack.com/current?access_key=${this.apiKeys.weatherstack}&query=${city}`;
         
         try {
             const response = await fetch(url);
@@ -213,7 +213,7 @@ class WeatherApp {
     }
 
     async fetchWeatherStackCoords(lat, lon) {
-        const url = `http://api.weatherstack.com/current?access_key=${this.apiKeys.weatherstack}&query=${lat},${lon}`;
+        const url = `https://api.weatherstack.com/current?access_key=${this.apiKeys.weatherstack}&query=${lat},${lon}`;
         const response = await fetch(url);
         const data = await response.json();
         
